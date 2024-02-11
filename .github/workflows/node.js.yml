@@ -30,6 +30,6 @@ jobs:
         uses: Azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: 'production' # Adjust if you're using deployment slots
+          slot-name: 'production' 
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE2 }} # Make sure to set this secret in your repository settings
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/dist # Adjust if your Angular app's build output is in a different directory
