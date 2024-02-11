@@ -2,11 +2,9 @@ name: Deploy Angular App to Azure
 
 on:
   push:
-    branches:
-      - main # Assuming your Angular app's main branch is named 'main'
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 env:
   AZURE_WEBAPP_PACKAGE_PATH: '.' # This should point to the folder where your Angular app is built
