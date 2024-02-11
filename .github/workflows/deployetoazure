@@ -2,9 +2,10 @@ name: Deploy Angular App to Azure
 
 on:
   push:
-    branches: [ "main","master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main","master" ]
+    branches: [ "main" ]
+
 
 env:
   AZURE_WEBAPP_PACKAGE_PATH: '.' # This should point to the folder where your Angular app is built
@@ -18,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '18.x'
       - name: Install dependencies
